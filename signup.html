@@ -1,158 +1,112 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<script src="jquery-3.3.1.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$("input").focus(function () {
-				$(this).css("background-color", "yellow")
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-			});
-			$("input").blur(function () {
-				$(this).css("background-color", "white")
-			});
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-		});
-	</script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-	<style>
-		body {
-			font-family: Arial;
-		}
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            width: 700px;
+            margin-top: 30px;
+        }
 
-		form {
-			border: 3px solid width="40%"
-		}
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=number],
+        input[type=date],
+        #select {
+            border: 1px solid #8f8f8f;
+            border-radius: 6px;
+            color: black;
+        }
 
-		input[type=text],
-		input[type=password],
-		input[type=email],
-		input[type=number],
-		input[type=date],
-		input[type=radiobutton],
-		input[type=checkbox],
-		input[type=textarea] {
-			width: 40%;
-			padding: 12px 20px;
-			margin: 4px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-		}
-
-		button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 10px 5px;
-			margin: 10px 0;
-			border: none;
-			cursor: pointer;
-			width: 20%;
-		}
-
-		tr:hover {
-			background-color: gray;
-			font-weight: bold;
-			color: white;
-
-		}
-	</style>
-	<script>
-		function validate() {
-			var upass = document.frmregister.password.value;
-			if (!isNaN(upass)) {
-				alert("Password can't contain only numbers");
-				return false;
-			}
-
-			if (confirm("Do you really want to Submit")) {
-				return true;
-			}
-			return false;
-		}
-
-		function validateuname(username) {
-			if (username.length < 6) {
-				document.getElementById("errortxt").innerHTML = "Username must be more then 6 characters"
-				alert("Username must be more then 6 characters");
-				var name = prompt("Enter Valid Username");
-				document.frmregister.username.value = name;
-			}
-		}
-
-		function validateemail() {
-			var email = document.getElementById("email").value;
-
-			if (
-				(email.indexOf('@') < 2)
-				||
-				(email.indexOf('@') != email.lastIndexOf('@'))
-			) {
-				alert("Invalid email");
-			}
-
-		}
-
-	</script>
-
+        .btn {
+            width: 500px;
+            margin-top: 30px;
+            height: 40px;
+        }
+    </style>
 </head>
 
-<div class="master">
-
-	<head>
-		<title>Registration Form</title>
-	</head>
-
-	<body>
-
-		<form action="framing.htm">
-
-			<center> <br /><label for="first_name"><b>First name</b></label>
-				<input type="text" id="first_name" placeholder="Enter first name" name="First_name" />
-				<br /><label for="last_name"><b>Last name</b></label>
-				<input type="text" id="last_name" placeholder="Enter last name" name="last_name" />
-
-
-
-				<div class="container">
-					<label for="username"><b>Username</b></label>
-
-					<input class="container" required autofocus autocomplete type="text" id="username"
-						placeholder="Enter Username" maxlength="10" name="username"
-						onblur="validateuname(this.value)" />
-					<br /><label for="userpassword"><b>Password</b></label>&nbsp
-					<input type="password" id="userpassword" placeholder="Enter Password" name="password" />
-					<br /><label for="email"><b>Email Id</b></label>&nbsp&nbsp&nbsp&nbsp
-					<input type="email" id="email" placeholder="Enter Valid Email" onblur="validateemail()" />
-
-					</br> <label for="mobile"><b>Mobile No.</b></label>
-					<input type="number" id="mobile" placeholder="Enter Mobile Number " />
-					<br /><label for="dob"><b>DOB</b></label> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-					<input type="date" id="dob" />
-					<br /><label for="uname"><b>Gender</b></label>
-					<input type="radio" id="rdogender" name="rdogender" checked> Male
-					<input type="radio" id="rdogender" name="rdogender"> Female
-					<input type="radio" id="rdogender" name="rdogender"> Transgender
-
-					<br /><br /><label for="uname"><b>Country</b></label>
-					<select name="selcountry">
-						<option selected> India </option>
-						<option> Sweden </option>
-						<option> Japan </option>
-						<option> Korea </option>
-						<option> United Kingdom </option>
-					</select>
-					<br /><br />
-					<label><b>Address</b></label>&nbsp&nbsp&nbsp&nbsp
-					<input type="text" placeholder="Enter Address">
-				</div>
-
-				<br /><button type="submit"> Register </button>
-				<button type="reset"> Clear </button>
-			</center>
-
-		</form>
-</div>
+<body>
+    <center>
+        <h1 style="color:black;font-family:cursive;margin-top:20px">Sign Up</h1>
+    </center>
+    <form class="container">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="fn" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="mn" placeholder="Middle Name">
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="ln" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <input type="text" class="form-control" id="address" placeholder="Address" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="" placeholder="City" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="" placeholder="District">
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="" placeholder="State" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="" placeholder="Pincode" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="email" class="form-control" name="" id="" placeholder="Email" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="text" class="form-control" name="" id="" placeholder="Mobile" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="date" class="form-control" name="" id="" placeholder="DOB" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <select name="" id="select" class="form-control">
+                    <option>Gender....</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="password" class="form-control" name="" id="" placeholder="Password" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="password" class="form-control" name="" id="" placeholder="Confirm Password" required>
+            </div>
+        </div>
+        <center>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </center>
+    </form>
 </body>
 
 </html>
