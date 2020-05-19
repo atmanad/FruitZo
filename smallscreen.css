@@ -1,5 +1,5 @@
 .navbar-brand {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
   font-family: cursive;
 }
@@ -27,16 +27,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 .img-size {
-  height: 230px;
-  width: 230px;
+  height: 150px;
+  width: 150px;
 }
-
 th,
 td {
   padding: 0px;
 }
 /*for footer*/
-
 center {
   width: 100%;
   height: 100px;
@@ -44,12 +42,12 @@ center {
   overflow: hidden;
   border: 0.5px solid grey;
 }
-.social a{
+.social a {
   margin: 0 19px 0 0;
   font-size: 25px;
   color: black;
 }
-.social{
+.social {
   margin-top: 10px;
 }
 .footer {
@@ -64,20 +62,27 @@ center {
   font-size: 18px;
   font-weight: 200;
 }
+/* Add the ability to scroll */
 .example {
   overflow-y: scroll;
   overflow-x: scroll;
-  /* Add the ability to scroll */
 }
-
 .example::-webkit-scrollbar {
   display: none;
 }
-/*for cart button hover*/
+/*for cart button*/
 .btnh:hover {
   color: white;
 }
-.cart{
-  height: 17px;
-  width: 18px;
+/* bottom margin for 1st two images of a row */
+.gap {
+  margin-bottom: 15px;
+}
+.form-control {
+  /* width for search box */
+  width: 200px;
+}
+/*bottom margin for shop by category*/
+.mbfs {
+  margin-bottom: 8px;
 }

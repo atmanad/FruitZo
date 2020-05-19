@@ -16,13 +16,42 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
     <!--social media-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--External CSS-->
-    <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="frontpage.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+    <script>
+        $(document).ready(function () {
+            $(".hv").hover(function () {
+                ihv.style.transform = "scale3d(1.1,1.1,1.1)";
+            },
+                function () {
+                    ihv.style.transform = "scale3d(1,1,1)";
+                });
+        });
+
+        /*   $(document).ready(function () {
+               $(".hv").hover(function () {
+                   $(this).ohover();
+               },
+                   function () {
+                       $(this).ofhover();
+                   });
+           });
+           function ohover() {
+               this.style.transform = "scale(1.1)";
+           }
+           function ofhover() {
+               this.style.transform = "scale(1)";
+           }*/
+    </script>
+
     <title>Home Page</title>
+
 </head>
 
 <body class="example">
@@ -37,15 +66,17 @@
                 <a href="" class="nav-item nav-link">Home</a>
                 <a href="cart.html" class="nav-item nav-link" target="_blank">My Cart</a>
                 <a href="" class="nav-item nav-link" target="_blank">Offer Zone</a>
+                <!--<li class="nav-item"><a href="gallery.html" class="nav-link" target="_blank">Gallery</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link" target="_blank">About Us</a></li>-->
                 <a href="signup.html" class="nav-item nav-link" target="_blank">Sign Up</a>
                 <a href="login.html" class="nav-item nav-link" target="_blank">Log In</a>
 
-                <div class="dropdown ml-sm-2">
+                <div class="dropdown ml-sm-2 mbfs">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="shopbycategory"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Shop By Category
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="shopbycategory">
+                    <div class="dropdown-menu " aria-labelledby="shopbycategory">
                         <a class="dropdown-item" href="">Brinjal</a>
                         <a class="dropdown-item" href="">Apple</a>
                         <a class="dropdown-item" href="">Bananas</a>
@@ -64,90 +95,91 @@
     </nav>
     <div class="container">
         <div class="row mt-5">
-            <div class="col"><img class="rounded img-size" src="./pictures/food-fruits-green-59830.jpg">
-                <figcaption>Watermelon<br />MRP 30/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col">
+                <img class="rounded img-size hv" id="ihv" src="./pictures/food-fruits-green-59830.jpg">
+                <figcaption class="gap">Watermelon<br />MRP 30/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="./pictures/bell-peppers-food-fruits-57426.jpg">
-                <figcaption>Peppers<br />MRP 45/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                <figcaption class="gap">Peppers<br />MRP 45/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="./pictures/agriculture-close-up-delicious-214168.jpg">
                 <figcaption>Sugar apple<br />MRP 60/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="./pictures/berries-food-fresh-59999.jpg">
                 <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col"><img class="rounded img-size" src="./pictures/fresh-mango-500x500.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                <figcaption class="gap">Mango<br />MRP 30/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="./pictures/berry-bowl-of-fruit-cherries-1178610.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                <figcaption class="gap">Berry<br />MRP 65/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/cherries-fruit-red-power-52733.jpeg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/food-fruits-red-70746.jpg">
+                <figcaption>Strawberry<br />MRP 69/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="pictures/black-citrus-citrus-fruit-952360.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                <figcaption>Lemon<br />MRP 10/5pc <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col"><img class="rounded img-size" src="./pictures/food-fruits-green-59830.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/482728017-612x612.jpg">
+                <figcaption class="gap">Kiwi<br />MRP 55/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/bell-peppers-food-fruits-57426.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/abundance-berries-blueberries-1153655.jpg">
+                <figcaption class="gap">Blue Berries<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/agriculture-close-up-delicious-214168.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/apples-close-up-delicious-209339.jpg">
+                <figcaption>Apples<br />MRP 90/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/berries-food-fresh-59999.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/citrus-delicious-food-35063.jpg">
+                <figcaption>Oranges<br />MRP 54/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
         </div>
         <div class="row mt-4 mb-4">
-            <div class="col"><img class="rounded img-size" src="./pictures/citrus-delicious-food-35063 (1).jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/close-up-delicious-food-175767.jpg">
+                <figcaption class="gap">Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/bananas-clipping-close-up-61127.jpg" alt="">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="pictures/bananas-clipping-close-up-61127.jpg" alt="">
+                <figcaption class="gap">Bananas<br />MRP 30/12pc <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
-            <div class="col"><img class="rounded img-size" src="./pictures/food-fruits-glass-36736.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+            <div class="col"><img class="rounded img-size" src="./pictures/lychee-fruit-fresh-food-39288.jpeg">
+                <figcaption>Lychee<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
             <div class="col"><img class="rounded img-size" src="./pictures/grapes.jpg">
-                <figcaption>Berry<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
-                        <img src="pictures/shopping_cart_add.png" height="17" width="18" alt="">
+                <figcaption>Grapes<br />MRP 34/500g <button class="btn btn-outline-dark btnh btn-sm">
+                        <img src="./pictures/shopping_cart_add.png" height="17" width="18" alt="">
                         <span>&nbsp;ADD</span></button></figcaption>
             </div>
         </div>
