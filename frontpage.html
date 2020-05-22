@@ -21,11 +21,15 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
     <!--social media-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Dropdown icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--External CSS-->
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="frontpage.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
-    <script>
-        $(document).ready(function () {
+
+    <!-- increase the picture size on hover -->
+    <!-- <script>
+         $(document).ready(function () {
             $(".hv").hover(function () {
                 ihv.style.transform = "scale3d(1.1,1.1,1.1)";
             },
@@ -33,66 +37,63 @@
                     ihv.style.transform = "scale3d(1,1,1)";
                 });
         });
-
-        /*   $(document).ready(function () {
-               $(".hv").hover(function () {
-                   $(this).ohover();
-               },
-                   function () {
-                       $(this).ofhover();
-                   });
-           });
-           function ohover() {
-               this.style.transform = "scale(1.1)";
-           }
-           function ofhover() {
-               this.style.transform = "scale(1)";
-           }*/
-    </script>
-
+    </script> -->
+    
     <title>Home Page</title>
 
 </head>
 
-<body class="example">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="navbar-brand">FruitZo</div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#togglednavbar"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="togglednavbar">
-            <div class="navbar-nav mr-auto">
-                <a href="" class="nav-item nav-link">Home</a>
-                <a href="cart.html" class="nav-item nav-link" target="_blank">My Cart</a>
-                <a href="" class="nav-item nav-link" target="_blank">Offer Zone</a>
-                <!--<li class="nav-item"><a href="gallery.html" class="nav-link" target="_blank">Gallery</a></li>
-                <li class="nav-item"><a href="aboutus.html" class="nav-link" target="_blank">About Us</a></li>-->
-                <a href="signup.html" class="nav-item nav-link" target="_blank">Sign Up</a>
-                <a href="login.html" class="nav-item nav-link" target="_blank">Log In</a>
-
-                <div class="dropdown ml-sm-2 mbfs">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="shopbycategory"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Shop By Category
-                    </button>
-                    <div class="dropdown-menu " aria-labelledby="shopbycategory">
-                        <a class="dropdown-item" href="">Brinjal</a>
-                        <a class="dropdown-item" href="">Apple</a>
-                        <a class="dropdown-item" href="">Bananas</a>
-                        <a class="dropdown-item" href="">Berries</a>
-                        <a class="dropdown-item" href="">Oranges</a>
+<body class="pagescroll">
+    <div id="wcontainer">
+        <nav class="navbar navbar-expand-lg">
+            <div class="navbar-brand">FruitZo</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#togglednavbar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="togglednavbar">
+                <div class="navbar-nav mr-auto ml-5">
+                    <a href="" class="nav-item nav-link mr-4">Home</a>
+                    <a href="cart.html" class="nav-item nav-link mr-4" target="_blank">My Cart</a>
+                    <a href="" class="nav-item nav-link mr-4" target="_blank">Offer Zone</a>
+                    <a href="signup.html" class="nav-item nav-link mr-4" target="_blank">Sign Up</a>
+                    <a href="login.html" class="nav-item nav-link mr-4" target="_blank">Log In</a>
+                </div>
+                <form action="" class="form-inline">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light" id="search-btn" type="submit">Search</button>
                     </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div class="secondnav" id="secondna">
+        <div class="middle">
+            <div class="dropd">
+                <button class="dropb">Fruits
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Apple</a>
+                    <a href="#">Avodaco</a>
+                    <a href="#">Blue Berries</a>
                 </div>
             </div>
-            <form action="" class="form-inline">
-                <input type="text" class="form-control" placeholder="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-dark" type="submit">Search</button>
+            <div class="dropd">
+                <button class="dropb">Vegetables
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Carrot</a>
+                    <a href="#">Papaya</a>
+                    <a href="#">Potato</a>
                 </div>
-            </form>
+            </div>
         </div>
-    </nav>
+    </div>
+
     <div class="container">
         <div class="row mt-5">
             <div class="col">
